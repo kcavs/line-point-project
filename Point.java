@@ -15,6 +15,9 @@ public class Point{
     }
     public boolean isCollinear(Point p1, Point p2){
         boolean result=false;
+        if((p1.getX()-p2.getX()==0)&&(p1.getX()-this.getX()==0)){
+            return true;
+        }
         double s1=((double)this.getY()-(double)p1.getY())/((double)this.getX()-(double)p1.getX());
         double s2=((double)p1.getY()-(double)p2.getY())/((double)p1.getX()-(double)p2.getX());
         double s3=((double)p2.getY()-(double)this.getY())/((double)p2.getX()-(double)this.getX());

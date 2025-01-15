@@ -22,23 +22,17 @@ public class Line2D {
         return endP2;
     }
     public String toString(){
-        String info="[("+px1+", "+py1+"), ("+px2+", "+py2+")]";
+        String info="";
+        if((endP1.getY()+endP2.getY())==0){
+            info="[("+px1+", "+py1+"), ("+px2+", "+py2+")]";
+        }
+        else{
+            info="[("+endP1.getX()+", "+endP1.getY()+"), ("+endP2.getX()+", "+endP2.getY()+")]";
+        }
         return info;
     }
     public double getSlope(){
-        double pSlope=(endP1.getY()-endP2.getY())/(endP1.getX()-endP2.getX());
-        double cSlope=(py1-py2)/(px1-px2);
-        double slope=0;
-        if(pSlope>0){
-            slope=pSlope;
-        }
-        else if(cSlope>0){
-            slope=cSlope;
-        }
-        else{
-            System.out.println("undefined slope");
-        }
-        return slope;
+        return (double)((this.endP1).getY()-(this.endP2).getY())/((this.endP1).getX()-(this.endP2).getX());
     }
     public boolean isCollinear(Point p){
         boolean result=false;

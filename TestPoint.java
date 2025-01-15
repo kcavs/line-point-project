@@ -8,7 +8,8 @@ public class TestPoint {
         Point p6=new Point(6,8);
         int r1 =p2.manhattanDistance(p3); 
         int r2= p3.manhattanDistance(p4); 
-        System.out.println("Testing manhattanDistance:");
+        System.out.println("the points: \np1: x=0, y=0\np2: x=3, y=4\np3: x=-5,y=7\np4: x=3, y=-10\np5: x=3, y=10\np6: x=6, y=8");
+        System.out.println("\nTesting manhattanDistance:");
         System.out.println("p2 to p3: "+r1);
         System.out.println("p3 to p4: "+r2);
         System.out.println("\nTesting isCollinear: ");
