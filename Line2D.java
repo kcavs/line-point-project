@@ -9,11 +9,11 @@ public class Line2D {
         endP1=p1;
         endP2=p2;
     }
-    public Line2D(int x1,int x2,int y1,int y2){
+    public Line2D(int x1,int y1,int x2,int y2){
         px1=x1;
         px2=x2;
         py1=y1;
-        px2=x2;
+        py2=y2;
     }
     public Point getP1(){
         return endP1;
@@ -22,14 +22,13 @@ public class Line2D {
         return endP2;
     }
     public String toString(){
-        String info="";
-        if((endP1.getY()+endP2.getY())==0){
-            info="[("+px1+", "+py1+"), ("+px2+", "+py2+")]";
+        if(endP1==null){
+            return ("[("+px1+", "+py1+"), ("+px2+", "+py2+")]");
         }
         else{
-            info="[("+endP1.getX()+", "+endP1.getY()+"), ("+endP2.getX()+", "+endP2.getY()+")]";
+            return ("[("+(this.endP1).getX()+", "+(this.endP1).getY()+"), ("+(this.endP2).getX()+", "+(this.endP2).getY()+")]");
         }
-        return info;
+        
     }
     public double getSlope(){
         return (double)((this.endP1).getY()-(this.endP2).getY())/((this.endP1).getX()-(this.endP2).getX());
